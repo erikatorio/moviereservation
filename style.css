@@ -1,9 +1,9 @@
 body {
-	background-color: #f7f1e3 !important;
+	background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 #navigation {
-	background-color: #b33939;
+	background-color: #881116;
 	padding: 5px 2px;
 }
 
