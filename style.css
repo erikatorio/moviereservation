@@ -1,10 +1,11 @@
 body {
 	background-color: rgba(0, 0, 0, 0.2) !important;
+	overflow-x: hidden;
 }
 
 #navigation {
 	background-color: #881116;
-	padding: 5px 2px;
+	/* padding: 5px 2px; */
 }
 
 #nav-bar-items {
