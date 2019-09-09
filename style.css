@@ -197,11 +197,39 @@ body {
 	font-size: 16px;
 	padding: 16px 32px;
   }
+
 .footer {
 	background-color: #2D2926FF !important;
+	/* position: absolute; */
+	width: 100%;
 }
 
 .footer-copyright {
 	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.breadcrumb {
+	margin: 0 300px;
+	background: #000000 !important;
+}
+
+#movie-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+.reservation {
+	padding: 0 200px 100px !important;
+}
+
+/* select */
+.input-group-prepend {
+	background-color: #000000 !important;
 }
