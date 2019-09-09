@@ -1,5 +1,5 @@
 body {
-	background-color: #3d3d3d !important;
+	background-color: #000000 !important;
 	overflow-x: hidden;
 }
 
@@ -56,7 +56,7 @@ body {
 #title-label {
 	font-family: 'Montserrat', sans-serif;
 	color: #E94B3CFF;
-	text-shadow: 2px 2px #000000;
+	text-shadow: 2px 2px #f3f3f3;
 }
 
 #button-text {
