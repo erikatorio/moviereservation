@@ -207,3 +207,8 @@ body {
 	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
 }
+
+.container {
+	padding: 100px;
+	background-color: white;
+}
