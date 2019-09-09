@@ -119,3 +119,17 @@ body {
 .carousel-item .d-block {
 	height: 450px;
 }
+
+.card-img-top {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.container:hover .card-img-top {
+	opacity: 0.3;
+  }
+  
