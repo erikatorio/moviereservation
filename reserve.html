@@ -30,24 +30,43 @@
 <body>
 	<!-- nav bar -->
 	<nav class="navbar navbar fixed-top" id="navigation">
-		<a class="navbar-brand mr-0" href="#" id="logo-name">
+		<a class="navbar-brand mr-0" href=".\index.html" id="logo-name">
 			<img src=".\assets\popcorn.png" class="d-inline-block align-top" alt="" id="logo">
 			Cinema World
 		</a>
 		<ul class="nav" id="nav-bar-items">
 			<li class="nav-item">
-				<a class="nav-link nav-bar-item" href="#" id="first-menu">Now Showing</a>
+                <a class="nav-link nav-bar-item" href=".\index.html#now-showing" id="first-menu">Now Showing</a>
+                <div class="underline"></div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-bar-item" href="#" id="first-menu">Reserve</a>
+                <a class="nav-link nav-bar-item" href=".\reserve.html" id="first-menu">Reserve</a>
+                <div class="underline"></div>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link nav-bar-item" href="#" id="second-menu">Coming Soon</a>
+                <a class="nav-link nav-bar-item" href="#" id="second-menu">Coming Soon</a>
+                <div class="underline"></div>
 			</li>
 		</ul>
-	</nav>
+    </nav>
+
+    <div class="jumbotron jarallax rounded-0" id="movie-header">
+            <h1 class="display-4" id="header-title">Movie Title</h1>
+            <p class="lead" id="starting">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+    <!-- breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Reserve</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Seating</li>
+        </ol>
+    </nav>
+
 	<!-- reservation form -->
-	<div class="container">
+	<div class="container reservation">
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
 				<label class="input-group-text" for="inputGroupSelect01">Movie Title</label>

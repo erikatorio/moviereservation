@@ -15,11 +15,9 @@ body {
 .nav-bar-item {
 	color: #E94B3CFF;
 	font-family: 'Roboto Condensed', sans-serif;
+	text-shadow: 1px 1px #000000;
+	transition: color 0.5s;
 }
-
-/*#first-menu {
-	border-right: 0.05px solid #f5f6fa;
-}*/
 
 #logo-name {
 	font-family: 'Alegreya Sans SC', sans-serif;
@@ -72,7 +70,7 @@ body {
 
 #movie-card {
 	width: 100%;
-	background-color: #DFE4EA;
+	background-color: #000000;
 }
 
 #movie-poster {
@@ -118,7 +116,7 @@ body {
 
 .carousel-item .d-block-1 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-one.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-one.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -129,7 +127,7 @@ body {
 
 .carousel-item .d-block-2 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-two.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-two.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -140,7 +138,7 @@ body {
 
 .carousel-item .d-block-3 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-three.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-three.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -151,7 +149,7 @@ body {
 
 .carousel-item .d-block-4 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-four.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-four.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -199,8 +197,11 @@ body {
 	font-size: 16px;
 	padding: 16px 32px;
   }
+
 .footer {
 	background-color: #2D2926FF !important;
+	/* position: absolute; */
+	width: 100%;
 }
 
 .footer-copyright {
@@ -216,4 +217,29 @@ body {
 .chair {
 	background-color: white;
 	padding: 20%;
+}
+
+.breadcrumb {
+	margin: 0 300px;
+	background: #000000 !important;
+}
+
+#movie-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://images.unsplash.com/photo-1505775561242-727b7fba20f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+.reservation {
+	padding: 0 200px 100px !important;
+}
+
+/* select */
+.input-group-prepend {
+	background-color: #000000 !important;
 }
