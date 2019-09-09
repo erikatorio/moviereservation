@@ -114,3 +114,7 @@ body {
 .feedback-text {
 	height: 250px;
 }
+
+.carousel-item .d-block {
+	height: 450px;
+}
