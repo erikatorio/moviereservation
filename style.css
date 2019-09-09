@@ -1,10 +1,10 @@
 body {
-	background-color: rgba(0, 0, 0, 0.2) !important;
+	background-color: #3d3d3d !important;
 	overflow-x: hidden;
 }
 
 #navigation {
-	background-color: #881116;
+	background-color: #2D2926FF;
 	/* padding: 5px 2px; */
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 .nav-bar-item {
-	color: #f5f6fa;
+	color: #E94B3CFF;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
 
 #logo-name {
 	font-family: 'Alegreya Sans SC', sans-serif;
-	color: #f5f6fa;
+	color: #E94B3CFF;
 }
 
 #logo {
@@ -54,19 +54,24 @@ body {
 
 #title-label {
 	font-family: 'Montserrat', sans-serif;
+	color: #E94B3CFF;
+	text-shadow: 2px 2px #000000;
 }
 
 #button-text {
 	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #2D2926FF;
+	color: #E94B3CFF;
 }
 
 #now-showing {
-	border-bottom: 0.5px solid;
+	border-bottom: #E94B3CFF 0.5px solid;
 	margin: 50px 400px;
 }
 
 #movie-card {
 	width: 100%;
+	background-color: #DFE4EA;
 }
 
 #movie-poster {
