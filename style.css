@@ -116,6 +116,46 @@ body {
 	height: 250px;
 }
 
-.carousel-item .d-block {
+.carousel-item .d-block-1 {
 	height: 450px;
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-one.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	padding-top: 200px;
+	margin-bottom: 0px;
+}
+
+.carousel-item .d-block-2 {
+	height: 450px;
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-two.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	padding-top: 200px;
+	margin-bottom: 0px;
+}
+
+.carousel-item .d-block-3 {
+	height: 450px;
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-three.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	padding-top: 200px;
+	margin-bottom: 0px;
+}
+
+.carousel-item .d-block-4 {
+	height: 450px;
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/review-four.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	padding-top: 200px;
+	margin-bottom: 0px;
 }
