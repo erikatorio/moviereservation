@@ -319,10 +319,19 @@ body {
 }
 
 .legends {
-	padding: 50px;
+	margin-top: 30px;
+	padding: 16px 10px;
 	background-color: black;
 	width: 200px !important;
 	cursor: context-menu;
+}
+
+.legend-title {
+	color: #E94B3CFF;
+	text-shadow: 1px 1px #f3f3f3;
+	font-size: 30px;
+	margin-bottom: 15px;
+	margin-left: 22%;
 }
 
 .legends-seat-available {
