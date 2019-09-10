@@ -4,7 +4,7 @@ body {
 }
 
 #navigation {
-	background-color: #2D2926FF;
+	background-color: rgb(12, 11, 10);
 	/* padding: 5px 2px; */
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 #header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://images.unsplash.com/photo-1512149074996-e923ac45be6a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -47,6 +47,8 @@ body {
 
 #header-title {
 	font-family: 'Montserrat', sans-serif;
+	color: #E94B3CFF;
+	text-shadow: 2px 2px #f3f3f3;
 }
 
 #starting {
@@ -64,7 +66,7 @@ body {
 
 #button-text {
 	font-family: 'Roboto Condensed', sans-serif;
-	background-color: #2D2926FF;
+	background-color: rgb(12, 11, 10);
 	color: #E94B3CFF;
 }
 
@@ -80,7 +82,6 @@ body {
 
 #movie-poster {
 	width: 100%;
-	height: 370px;
 }
 
 #movie-title {
@@ -170,7 +171,7 @@ body {
   }
   
   .card:hover .card-body {
-	padding: 60% 0;
+	padding: 42% 0;
 	opacity: 1;
 	height: 100%;
 	width: 100%;
@@ -185,7 +186,7 @@ body {
   }
 
 .footer {
-	background-color: #2D2926FF !important;
+	background-color: rgb(12, 11, 10) !important;
 	/* position: absolute; */
 	width: 100%;
 }
@@ -223,7 +224,7 @@ body {
 }
 
 .reservation {
-	padding: 0 200px 50px 200px !important;
+	padding: 50px 200px 50px 200px !important;
 }
 
 .breadcrumb-item {
@@ -421,5 +422,5 @@ tbody {
 }
 
 #reservation-table {
-	margin: 10px 400px;
+	margin: 10px 200px;
 }
