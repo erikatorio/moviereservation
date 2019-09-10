@@ -35,7 +35,7 @@
         </a>
         <ul class="nav" id="nav-bar-items">
             <li class="nav-item">
-                <a class="nav-link nav-bar-item" href="#now-showing id="first-menu">Now Showing</a>
+                <a class="nav-link nav-bar-item" href=".\index.html#now-showing" id="first-menu">Now Showing</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-bar-item" href=".\reserve.html" id="first-menu">Reserve</a>
@@ -294,16 +294,48 @@
         </div>
     </div>
 
-    <div class="container legends">
+    <div class="container">
         <div class="row">
-            <div class="col-3 rounded-circle legends-seat-available"></div>
-            <div class="col-3 rounded-circle d-flex justify-content-center legends-seat-text">=</div>
-            <div class="col rounded-circle d-flex justify-content-center legends-seat-text">Available</div>
-        </div>
-        <div class="row">
-            <div class="col-3 rounded-circle legends-seat-taken"></div>
-            <div class="col-3 rounded-circle d-flex justify-content-center legends-seat-text">=</div>
-            <div class="col rounded-circle d-flex justify-content-center legends-seat-text">Not Available</div>
+            <div class="col legends">
+                <div class="row">
+                    <div class="col-3 rounded-circle legends-seat-available"></div>
+                    <div class="col-3 d-flex justify-content-center legends-seat-text">=</div>
+                    <div class="col d-flex justify-content-center legends-seat-text">Available</div>
+                </div>
+                <div class="row">
+                    <div class="col-3 rounded-circle legends-seat-taken"></div>
+                    <div class="col-3 d-flex justify-content-center legends-seat-text">=</div>
+                    <div class="col d-flex justify-content-center legends-seat-text">Not Available</div>
+                </div>
+            </div>
+            <div class="col summary">
+                <div class="row">
+                    <div class="col summary-title">
+                        Reservation Summary
+                    </div>
+                </div>
+                <div class="row summary-total">
+                    <div class="col-9">
+                        Total Number of Seats for Reservation: 
+                    </div>
+                    <div class="col-3 ticket_total">
+                        0
+                    </div>
+                </div>
+                <div class="row summary-total">
+                    <div class="col-8">
+                        Price: 
+                    </div>
+                    <div class="col-4 ticket_price">
+                        PHP 0.00
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="col-5 btn btn-sm btn-dark reserve-button" id="button-text">
+                        Reserve Tickets
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -355,9 +387,29 @@
         </div>
     </footer>
 
-    <script>        
+    <script>
+        var total_price = 0;     
+        var total_seats = 0;
+
+        $(".single-seat").each(function() {
+            if($(this).hasClass("active")) {
+                $(this).css("pointer-events","none");
+            } 
+        });
+        
         $(".single-seat").on('click', function(){
             $(this).toggleClass('active');
+            
+            if($(this).hasClass('active')) {
+                total_price += 200;
+                total_seats++;
+            } else {
+                total_price -= 200;
+                total_seats--;
+            }
+
+            $(".ticket_total").html(total_seats);
+            $(".ticket_price").html("PHP " + total_price + ".00");
         });
     </script>
 </body>
