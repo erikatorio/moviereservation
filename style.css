@@ -95,28 +95,9 @@ body {
 	margin: 30px auto;
 }
 
-#feedback-art {
-	background-color: #b33939;
-	height: 500px;
-}
-
-#feedback-image {
-	width: 400px;
-	height: 400px;
-}
-
-#feedback-form {
-	background-color: #000000;
-	padding: 50px 20px;
-}
-
-#feedback-label {
-	color: #f5f6fa;
+.time {
 	font-family: 'Roboto Condensed', sans-serif;
-}
-
-.feedback-text {
-	height: 250px;
+	font-size: 15px;
 }
 
 .carousel-item .d-block-1 {
@@ -242,7 +223,7 @@ body {
 }
 
 .reservation {
-	padding: 0 200px 100px !important;
+	padding: 0 200px 50px 200px !important;
 }
 
 .breadcrumb-item {
@@ -285,7 +266,7 @@ body {
 }
 
 /* static reservation pages */
-#cinema1-header {
+#movie1-header {
 	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/cinema-1.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -294,4 +275,75 @@ body {
 	color: #fff;
 	height: 400px;
 	padding-top: 190px;
+}
+
+#movie2-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-2.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie3-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-3.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie4-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-4.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie5-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-5.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie6-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-6.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+/* reservation table */
+.thead {
+	color: #E94B3CFF;
+	letter-spacing: 4px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+tbody {
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+#reservation-table {
+	margin: 10px 400px;
 }
