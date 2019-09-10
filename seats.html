@@ -28,20 +28,17 @@
 
 <body>
     <!-- nav bar -->
-    <nav class="navbar navbar fixed-top" id="navigation">
-        <a class="navbar-brand mr-0" href="#" id="logo-name">
+	<nav class="navbar navbar fixed-top" id="navigation">
+        <a class="navbar-brand mr-0" href=".\index.html" id="logo-name">
             <img src=".\assets\popcorn.png" class="d-inline-block align-top" alt="" id="logo">
             Cinema World
         </a>
         <ul class="nav" id="nav-bar-items">
             <li class="nav-item">
-                <a class="nav-link nav-bar-item" href="#" id="first-menu">Now Showing</a>
+                <a class="nav-link nav-bar-item" href="#now-showing id="first-menu">Now Showing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-bar-item" href="#" id="first-menu">Reserve</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-bar-item" href="#" id="second-menu">Coming Soon</a>
+                <a class="nav-link nav-bar-item" href=".\reserve.html" id="first-menu">Reserve</a>
             </li>
         </ul>
     </nav>
@@ -303,19 +300,51 @@
     
 
     <!-- Footer -->
-    <footer class="page-footer font-xs footer">
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="#" class="footer-copyright">CinemaWorld.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+	<footer class="page-footer font-small unique-color-dark footer">
+        <div class="container text-center text-md-left pt-5">
+            <div class="row">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold" id="footer-title">Cinema World</h6>
+                <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                <p id="footer-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.</p>
+        
+            </div>
 
-    <script>        
-        $(".single-seat").on('click', function(){
-            $(this).toggleClass('active');
-        });
-    </script>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold" id="footer-title">Menu</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p id="footer-item">
+                <a href=".\index.html#now-showing " id="footer-item">Now Showing</a>
+                </p>
+                <p id="footer-item">
+                <a href="reserve.html" id="footer-item">Reserve Tickets</a>
+                </p>
+                <p id="footer-item">
+                <a href="#" id="footer-item">Coming Soon</a>
+                </p>
+        
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase font-weight-bold" id="footer-title"">Contact</h6>
+                <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                <p  id="footer-item">
+                Alabang, Muntinlupa</p>
+                <p id="footer-item">
+                cinemaworld@gmail.com</p>
+                <p  id="footer-item">
+                + 01 234 567 88</p>
+            </div>
+            </div>
+        
+        </div>
+        <div class="footer-copyright text-center py-3" id="footer-item">© 2018 Copyright:
+            <a href=".\index.html"> cinemaworld.com</a>
+        </div>
+    </footer>
 </body>
 
 </html>
