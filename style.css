@@ -36,7 +36,7 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 	color: #fff;
-	height: 550px;
+	height: 500px;
 	padding-top: 190px;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 
 #movies {
-	margin: 50px auto;
+	margin: 30px auto;
 }
 
 #feedback-art {
@@ -204,14 +204,15 @@ body {
 	width: 100%;
 }
 
-.footer-copyright {
+#footer-title {
 	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 2.5px;
 }
 
-.container {
-	padding: 100px;
-	background-color: white;
+#footer-item {
+	color: #E94B3CFF !important;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 .chair {
