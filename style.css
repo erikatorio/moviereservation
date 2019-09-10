@@ -93,7 +93,7 @@ body {
 }
 
 .shadow {
-  box-shadow: 0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
 }
 
 #movies {
@@ -160,9 +160,9 @@ body {
 	height: auto;
 	transition: .5s ease;
 	backface-visibility: hidden;
-  }
-  
-  .card-body {
+}
+
+.card-body {
 	transition: .5s ease;
 	opacity: 0;
 	position: absolute;
@@ -173,32 +173,30 @@ body {
 	text-align: center;
 	color: white;
 	cursor: context-menu;
-  }
-  
-  .card:hover .card-img-top{
+}
+
+.card:hover .card-img-top {
 	opacity: 0.7;
-  }
-  
-  .card:hover .card-body {
+}
+
+.card:hover .card-body {
 	padding: 42% 0;
 	opacity: 1;
 	height: 100%;
 	width: 100%;
 	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
-  }
-  
-  .text {
+}
+
+.text {
 	background-color: #4CAF50;
 	color: white;
 	font-size: 16px;
 	padding: 16px 32px;
-  }
+}
 
 .footer {
 	background-color: rgb(12, 11, 10) !important;
-	/* position: absolute; */
 	width: 100%;
-	
 	cursor: context-menu;
 }
 
@@ -253,7 +251,6 @@ body {
 	margin-top: 100px
 }
 
-/* select */
 .input-group-prepend {
 	background-color: #000000 !important;
 }
@@ -263,7 +260,8 @@ body {
 }
 
 .screen-col {
-	background-color: rgb(233,75,60,0.6);;
+	background-color: rgb(233, 75, 60, 0.6);
+	;
 	color: #000000;
 	padding: 15px;
 	margin: 5px;
@@ -279,7 +277,7 @@ body {
 }
 
 .single-seat {
-	background-color: rgb(233,75,60,0.6);
+	background-color: rgb(233, 75, 60, 0.6);
 	color: #000000;
 	padding: 11px;
 	margin: 5px;
@@ -287,13 +285,13 @@ body {
 }
 
 .single-seat:hover {
-	background-color: rgb(233,75,60,0.4);
+	background-color: rgb(233, 75, 60, 0.4);
 	cursor: pointer;
 }
 
 .single-seat.active {
 	background-color: rgb(45, 41, 38, 0.7);
-	color: rgb(233,75,60,0.6);
+	color: rgb(233, 75, 60, 0.6);
 }
 
 .dummy-seat {
@@ -311,13 +309,13 @@ body {
 }
 
 .legends-seat-available {
-	background-color: rgb(233,75,60,0.6);
+	background-color: rgb(233, 75, 60, 0.6);
 	margin-left: 150px;
 	margin-bottom: 10px;
 }
 
 .legends-seat-taken {
-	background-color:  rgb(45, 41, 38, 0.7);
+	background-color: rgb(45, 41, 38, 0.7);
 	color: #E94B3CFF;
 	margin-left: 150px;
 	margin-top: 10px;
@@ -388,7 +386,6 @@ body {
 	border-color: #E94B3CFF;
 }
 
-/* static reservation pages */
 #movie1-header {
 	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/cinema-1.gif");
 	background-repeat: no-repeat;
@@ -455,7 +452,6 @@ body {
 	padding-top: 190px;
 }
 
-/* reservation table */
 .thead {
 	color: #E94B3CFF;
 	letter-spacing: 4px;
