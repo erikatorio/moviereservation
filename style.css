@@ -43,14 +43,12 @@ body {
 	color: #fff;
 	height: 500px;
 	padding-top: 190px;
-	cursor: context-menu;
 }
 
 #header-title {
 	font-family: 'Montserrat', sans-serif;
 	color: #E94B3CFF;
 	text-shadow: 2px 2px #f3f3f3;
-	cursor: context-menu;
 }
 
 #starting {
@@ -58,19 +56,17 @@ body {
 	padding-left: 20px;
 	margin: 30px 200px 30px 40px;
 	font-family: 'Open Sans Condensed', sans-serif;
-	cursor: context-menu;
 }
 
 #title-label {
 	font-family: 'Montserrat', sans-serif;
 	color: #E94B3CFF;
 	text-shadow: 2px 2px #f3f3f3;
-	cursor: context-menu;
 }
 
 #button-text {
 	font-family: 'Roboto Condensed', sans-serif;
-	background-color: rgb(45, 41, 38, 0.7);
+	background-color: rgb(12, 11, 10);
 	color: #E94B3CFF;
 }
 
@@ -114,7 +110,6 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
-	cursor: context-menu;
 }
 
 .carousel-item .d-block-2 {
@@ -126,7 +121,6 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
-	cursor: context-menu;
 }
 
 .carousel-item .d-block-3 {
@@ -138,7 +132,6 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
-	cursor: context-menu;
 }
 
 .carousel-item .d-block-4 {
@@ -150,7 +143,6 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
-	cursor: context-menu;
 }
 
 .card-one {
@@ -172,7 +164,6 @@ body {
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
 	color: white;
-	cursor: context-menu;
   }
   
   .card:hover .card-img-top{
@@ -198,8 +189,6 @@ body {
 	background-color: rgb(12, 11, 10) !important;
 	/* position: absolute; */
 	width: 100%;
-	
-	cursor: context-menu;
 }
 
 #footer-title {
@@ -221,7 +210,6 @@ body {
 .breadcrumb {
 	margin: 0 300px;
 	background: #000000 !important;
-	cursor: context-menu;
 }
 
 #movie-header {
@@ -237,7 +225,6 @@ body {
 
 .reservation {
 	padding: 50px 200px 50px 200px !important;
-	cursor: pointer;
 }
 
 .breadcrumb-item {
@@ -302,61 +289,28 @@ body {
 	margin: 5px;
 	height: 50px;
 }
-
 .legends {
 	padding: 50px;
 	background-color: black;
-	width: 200px !important;
-	cursor: context-menu;
+	width: 350px !important;
 }
 
 .legends-seat-available {
 	background-color: rgb(233,75,60,0.6);
-	margin-left: 150px;
-	margin-bottom: 10px;
+	height: 50px;
+	width: 50px;
 }
 
 .legends-seat-taken {
 	background-color:  rgb(45, 41, 38, 0.7);
 	color: #E94B3CFF;
-	margin-left: 150px;
-	margin-top: 10px;
+	height: 50px;
 }
 
 .legends-seat-text {
 	font-family: 'Roboto Condensed', sans-serif;
 	padding: 16px 10px;
 	color: #E94B3CFF;
-}
-
-.summary {
-	margin-top: 30px;
-	margin-bottom: 40px;
-	background-color: black;
-	font-family: 'Roboto Condensed', sans-serif;
-	padding: 16px 10px;
-	color: #E94B3CFF;
-	font-size: 30px;
-	letter-spacing: 2px;
-	cursor: context-menu;
-}
-
-.summary-title {
-	text-shadow: 1px 1px #f3f3f3;
-	padding-bottom: 10px;
-}
-
-.summary-total {
-	font-size: 20px;
-}
-
-.reserve-button {
-	margin-top: 20px !important;
-	margin-left: 20%;
-}
-
-.reserve {
-	cursor: context-menu;
 }
 
 #reservation-label {
