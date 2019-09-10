@@ -43,12 +43,14 @@ body {
 	color: #fff;
 	height: 500px;
 	padding-top: 190px;
+	cursor: context-menu;
 }
 
 #header-title {
 	font-family: 'Montserrat', sans-serif;
 	color: #E94B3CFF;
 	text-shadow: 2px 2px #f3f3f3;
+	cursor: context-menu;
 }
 
 #starting {
@@ -56,17 +58,19 @@ body {
 	padding-left: 20px;
 	margin: 30px 200px 30px 40px;
 	font-family: 'Open Sans Condensed', sans-serif;
+	cursor: context-menu;
 }
 
 #title-label {
 	font-family: 'Montserrat', sans-serif;
 	color: #E94B3CFF;
 	text-shadow: 2px 2px #f3f3f3;
+	cursor: context-menu;
 }
 
 #button-text {
 	font-family: 'Roboto Condensed', sans-serif;
-	background-color: rgb(12, 11, 10);
+	background-color: rgb(45, 41, 38, 0.7);
 	color: #E94B3CFF;
 }
 
@@ -110,6 +114,7 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
+	cursor: context-menu;
 }
 
 .carousel-item .d-block-2 {
@@ -121,6 +126,7 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
+	cursor: context-menu;
 }
 
 .carousel-item .d-block-3 {
@@ -132,6 +138,7 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
+	cursor: context-menu;
 }
 
 .carousel-item .d-block-4 {
@@ -143,6 +150,7 @@ body {
 	color: #fff;
 	padding-top: 200px;
 	margin-bottom: 0px;
+	cursor: context-menu;
 }
 
 .card-one {
@@ -164,6 +172,7 @@ body {
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
 	color: white;
+	cursor: context-menu;
   }
   
   .card:hover .card-img-top{
@@ -212,6 +221,7 @@ body {
 .breadcrumb {
 	margin: 0 300px;
 	background: #000000 !important;
+	cursor: context-menu;
 }
 
 #movie-header {
@@ -227,6 +237,7 @@ body {
 
 .reservation {
 	padding: 50px 200px 50px 200px !important;
+	cursor: pointer;
 }
 
 .breadcrumb-item {
@@ -342,6 +353,10 @@ body {
 .reserve-button {
 	margin-top: 20px !important;
 	margin-left: 20%;
+}
+
+.reserve {
+	cursor: context-menu;
 }
 
 #reservation-label {
