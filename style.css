@@ -215,6 +215,16 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+.container {
+	padding: 100px;
+	background-color: white;
+}
+
+.chair {
+	background-color: white;
+	padding: 20%;
+}
+
 .breadcrumb {
 	margin: 0 300px;
 	background: #000000 !important;
