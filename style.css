@@ -235,6 +235,10 @@ body {
 	color: #E94B3CFF !important;
 }
 
+.seat-breadcrumb {
+	margin-top: 100px
+}
+
 /* select */
 .input-group-prepend {
 	background-color: #000000 !important;
