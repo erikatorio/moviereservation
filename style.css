@@ -5,7 +5,6 @@ body {
 
 #navigation {
 	background-color: rgb(12, 11, 10);
-	/* padding: 5px 2px; */
 }
 
 #nav-bar-items {
@@ -13,15 +12,33 @@ body {
 }
 
 .nav-bar-item {
-	color: #E94B3CFF;
+	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-shadow: 1px 1px #000000;
 	transition: color 0.5s;
+
+	display: inline-block;
+	padding: 15px 20px;
+	position: relative;
 }
 
-.nav-bar-item:hover {
+.nav-bar-item:after {
 	color: #E94B3CFF;
-	text-shadow: 3px 3px #000000;
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: #E94B3CFF;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+
+.nav-bar-item:hover:after {
+	width: 100%;
+	left: 0;
 }
 
 #logo-name {
