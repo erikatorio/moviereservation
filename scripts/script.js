@@ -169,6 +169,7 @@ function populate() {
             }
         `
     } else {
+        now_showing = [];
         for (var key in movies) {
             if (movies.hasOwnProperty(key)) {
                 if(movies[key].date === 'September 4, 2019') {
