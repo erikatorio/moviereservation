@@ -53,168 +53,21 @@
 		<h2 id="title-label">Now Showing</h2>
 	</div>
 
-	<div class="container" id="movies">
-		<div class="row">
-			<div class="col-md">
-				<div class="d-flex justify-content-center">
-					<h3 id="title-label">Cinema 1</h3>
-				</div>
-				<div class="card card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-one.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Captain Marvel</h5>
-						<p class="time">
-							8:00 AM
-						</p>
-						<p class="time">
-							10:45 AM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-one.html" class="btn btn-sm" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md">
-				<div class="d-flex justify-content-center">
-					<h3 id="title-label">Cinema 2</h3>
-				</div>
-				<div class="card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-two.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Star Wars</h5>
-						<p class="time">
-							8:00 AM
-						</p>
-						<p class="time">
-							10:45 AM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-two.html" class="btn btn-sm btn-dark" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md">
-				<div class="d-flex justify-content-center">
-					<h3 id="title-label">Cinema 3</h3>
-				</div>
-				<div class="card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-three.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Harry Potter</h5>
-						<p class="time">
-							8:00 AM
-						</p>
-						<p class="time">
-							10:45 AM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-three.html" class="btn btn-sm btn-dark" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md">
-				<div class="d-flex justify-content-center">
-					<h3 id="title-label">Cinema 4</h3>
-				</div>
-				<div class="card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-four.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Wonder Woman</h5>
-						<p class="time">
-							8:00 AM
-						</p>
-						<p class="time">
-							10:45 AM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-four.html" class="btn btn-sm btn-dark" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
+	<div class="container" >
+		<div class="input-group mb-3 d-flex justify-content-start" id="select-date">
+			<label for="choose-day" class="col-sm-2 col-form-label" id="reservation-label">Date</label>
+			<select class="custom-select" id="choose-day" onchange="setDate(this.value)">
+				<option selected value="">Choose...</option>
+				<option value="September 4, 2019">September 4, 2019</option>
+				<option value="September 5, 2019">September 5, 2019</option>
+				<option value="September 6, 2019">September 6, 2019</option>
+			</select>
 		</div>
 	</div>
 
-	<!-- movies second row -->
 	<div class="container" id="movies">
-		<div class="row">
-			<div class="col-md">
-				<div class="card card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-two.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Star Wars</h5>
-						<p class="time">
-							1:30 PM
-						</p>
-						<p class="time">
-							4:15 PM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-two.html" class="btn btn-sm btn-dark" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md">
-				<div class="card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-two.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Star Wars</h5>
-						<p class="time">
-							1:30 PM
-						</p>
-						<p class="time">
-							4:15 PM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-two.html" class="btn btn-sm btn-dark" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md">
-				<div class="card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-five.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">IT: Chapter 2</h5>
-						<p class="time">
-							1:30 PM
-						</p>
-						<p class="time">
-							4:15 PM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-five.html" class="btn btn-sm" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-md">
-				<div class="card" id="movie-card">
-					<img class="card-img-top" src=".\assets\poster-six.jpg" alt="" id="movie-poster">
-					<div class="card-body">
-						<h5 class="card-title" id="movie-title">Aladdin</h5>
-						<p class="time">
-							1:30 PM
-						</p>
-						<p class="time">
-							4:15 PM
-						</p>
-						<div class="d-flex justify-content-center">
-							<a href=".\movie-six.html" class="btn btn-sm btn-dark" id="button-text">Reserve Tickets</a>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="row" id="now-showing-container">
+			
 		</div>
 	</div>
 
@@ -310,6 +163,8 @@
 		</div>
 	  </footer>
 
+	  <!-- script -->
+	  <script src=".\scripts\script.js"></script>
 	  <script>
 			$('.card-body').on('click', function() {
 				localStorage.setItem("selected-movie", test = $(this).find('.card-title').text());

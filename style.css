@@ -93,7 +93,11 @@ body {
 
 #now-showing {
 	border-bottom: #E94B3CFF 0.5px solid;
-	margin: 50px 400px;
+	margin: 30px 400px;
+}
+
+#select-date {
+	width: 300px;
 }
 
 #movie-card {
@@ -407,6 +411,12 @@ body {
 }
 
 #choose-date {
+	background-color: #000000;
+	color: #E94B3CFF;
+	border-color: #E94B3CFF;
+}
+
+#choose-day {
 	background-color: #000000;
 	color: #E94B3CFF;
 	border-color: #E94B3CFF;
