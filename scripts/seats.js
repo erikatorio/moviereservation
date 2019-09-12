@@ -318,9 +318,9 @@ $('#seats-button').click(function() {
                 </div>
             </div>
             <div class="row d-flex">
-                <div class="col-5 btn btn-sm btn-dark reserve-button" id="button-text">
+                <a href=".\\reserve.html" class="col-5 btn btn-sm btn-dark reserve-button" id="button-text">
                     Reserve Tickets
-                </div>
+                </a>
             </div>
         </div>
     </div>

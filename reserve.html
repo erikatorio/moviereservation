@@ -74,30 +74,11 @@
 					<th scope="col">Cinema</th>
 					<th scope="col">Schedule</th>
 					<th scope="col">Seats</th>
+					<th scope="col"></th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<th scope="row">21945</th>
-					<td>Aladdin</td>
-					<td>Cinema 4</td>
-					<td>09-15-2019 1:30 PM</td>
-					<td>F1-F4</td>
-				</tr>
-				<tr>
-					<th scope="row">21946</th>
-					<td>IT: Chapter 2</td>
-					<td>Cinema 3</td>
-					<td>09-18-2019 4:15 PM</td>
-					<td>A1-A3</td>
-				</tr>
-				<tr>
-					<th scope="row">21947</th>
-					<td>Captain Marvel</td>
-					<td>Cinema 1</td>
-					<td>09-25-2019 8:00 AM</td>
-					<td>B5-B7</td>
-				</tr>
+			<tbody id="reservation-body">
+				<!-- reservations -->
 			</tbody>
 		</table>
 	</div>
@@ -105,41 +86,41 @@
 	<!-- reservation form -->
 	<div class="container reservation">
 		<div class="input-group mb-3">
-			<label for="choose-movie" class="col-sm-2 col-form-label" id="reservation-label">Movie Title</label>
+			<label for="choose-movie" class="col-sm-4 col-form-label" id="reservation-label">Movie Title</label>
 			<select class="custom-select" id="choose-movie">
 				<option selected>Choose...</option>
-				<option value="1">Captain Marvel</option>
-				<option value="2">Star Wars</option>
-				<option value="3">Harry Potter</option>
-				<option value="3">Wonder Woman</option>
+				<option value="Captain Marvel">Captain Marvel</option>
+				<option value="Star Wars">Star Wars</option>
+				<option value="Harry Potter">Harry Potter</option>
+				<option value="Wonder Woman">Wonder Woman</option>
+				<option value="IT: Chapter 2">IT: Chapter 2</option>
+				<option value="Aladdin">Aladdin</option>
+				<option value="Avengers: Endgame">Avengers: Endgame</option>
+				<option value="Joker">Joker</option>
+				<option value="Spiderman: Far From Home">Spiderman: Far From Home</option>
+				<option value="Zombieland: Double Tap">Zombieland: Double Tap</option>
 			</select>
 		</div>
 
 		<div class="input-group mb-3">
-			<label for="choose-cinema" class="col-sm-2 col-form-label" id="reservation-label">Cinema</label>
+			<label for="choose-cinema" class="col-sm-4 col-form-label" id="reservation-label">Cinema</label>
 			<select class="custom-select" id="choose-cinema">
 				<option selected>Choose...</option>
-				<option value="1">Cinema 1</option>
-				<option value="2">Cinema 2</option>
-				<option value="3">Cinema 3</option>
-				<option value="3">Cinema 4</option>
+				<option value="Cinema 1">Cinema 1</option>
+				<option value="Cinema 2">Cinema 2</option>
+				<option value="Cinema 3">Cinema 3</option>
+				<option value="Cinema 4">Cinema 4</option>
 			</select>
 		</div>
 		
 		<div class="input-group mb-3">
-			<label for="datepicker" class="col-sm-2 col-form-label" id="reservation-label">Select Date</label>
+			<label for="datepicker" class="col-sm-4 col-form-label" id="reservation-label">Select Date</label>
 			<input id="datepicker" width="276"/>
 		</div>
 
 		<div class="input-group mb-3">
-			<label for="choose-date" class="col-sm-2 col-form-label" id="reservation-label">Select Time</label>
-			<select class="custom-select" id="choose-date">
-				<option selected>Choose...</option>
-				<option value="1">8:00 AM</option>
-				<option value="2">10:45 AM</option>
-				<option value="3">1:30 PM</option>
-				<option value="3">4:15 PM</option>
-			</select>
+			<label for="choose-date" class="col-sm-4 col-form-label" id="reservation-label">Select Time</label>
+			<p class="reservation-item" id="showing-time">8:00 PM</p>
 		</div>
 		<div class="d-flex justify-content-center">
 			<a href="#seats" class="btn btn-md" id="seats-button">Select Seats</a>
@@ -204,6 +185,7 @@
 		});
 	</script>
 	<script src=".\scripts\seats.js"></script>
+	<script src=".\scripts\reserve.js"></script>
 </body>
 
 </html>
