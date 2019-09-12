@@ -22,54 +22,45 @@ $(document).on('click', '.single-seat', function () {
 
 $(document).on('click', '#reserve-button-two', function () {
     var temp = [];
-    var local = JSON.parse(localStorage.getItem('reserved-seats'));
-    if (local === null) {
-        localStorage.setItem('reserved-seats', JSON.stringify({
-            title: selected_movie,
-            cinema: selected_cinema,
-            date: selected_date,
-            seat: []
-        }));
-        local = JSON.parse(localStorage.getItem('reserved-seats'));
+    var local = [];
+    var index = null;
+    if (JSON.parse(localStorage.getItem('reserved-seats') === null)) {
+        localStorage.setItem('reserved-seats', JSON.stringify(local));
     }
 
-    if(local['title'] === selected_movie && local['cinema'] === selected_cinema && local['date'] === selected_date) {
-        // console.log(local['seat']);
-        for (ctr in local['seat']) {
-            temp.push(local['seat'][ctr].toString());
-        }
-        $(".single-seat").each(function () {
-            if ($(this).hasClass('active')) {
-                temp.push($(this).text().trim());
+    local = JSON.parse(localStorage.getItem('reserved-seats'));
+    selected_movie = localStorage.getItem('selected-movie');
+    selected_cinema = localStorage.getItem('selected-cinema');
+    selected_date = localStorage.getItem('selected-date');
+    for (ctr in local) {
+        if (local[ctr]['title'] === selected_movie &&
+            local[ctr]['cinema'] === selected_cinema &&
+            local[ctr]['date'] === selected_date) {
+            index = ctr;
+            for (ctrl in local[ctr]['seat']) {
+                temp.push(local[ctr]['seat']);
             }
-        });
-        localStorage.removeItem('reserved-seats');
-        localStorage.setItem('reserved-seats', JSON.stringify({
-            title: local['title'],
-            cinema: local['cinema'],
-            date: local['date'],
-            seat: temp
-        }));
-    } else {
-        for (ctr in local['seat']) {
-            temp.push(local['seat'][ctr].toString());
         }
-        $(".single-seat").each(function () {
-            if ($(this).hasClass('active')) {
-                temp.push($(this).text().trim());
-            }
-        });
-        var tempo = [];
-        tempo = local;
-        tempo.push({
-            title: selected_movie,
-            cinema: selected_cinema,
-            date: selected_date,
-            seat: temp
-        });
-        localStorage.removeItem('reserved-seats');
-        localStorage.setItem('reserved-seats', JSON.stringify(tempo));
     }
+    console.log(index);
+    $(".single-seat").each(function () {
+        if ($(this).hasClass('active')) {
+            temp.push($(this).text().trim());
+        }
+    });
+    var items = {
+        title: selected_movie,
+        cinema: selected_cinema,
+        date: selected_date,
+        seat: temp
+    }
+    if (index === null) {
+        local.push(items);
+    } else {
+        local[index]['seat'] = temp;
+    }
+    localStorage.removeItem('reserved-seats')
+    localStorage.setItem('reserved-seats', JSON.stringify(local))
 });
 
 $('#seats-button').click(function () {
@@ -374,14 +365,30 @@ $('#seats-button').click(function () {
         </div>
     </div>
 </div>`);
-
     var active_seats = JSON.parse(localStorage.getItem('reserved-seats'));
+    var index = null;
+    for (ctr in active_seats) {
+        if (active_seats[ctr]['title'] === selected_movie &&
+            active_seats[ctr]['cinema'] === selected_cinema &&
+            active_seats[ctr]['date'] === selected_date) {
+            index = ctr;
+        }
+    }
+    var temp = active_seats[index]['seat']
+    console.log(active_seats[index]['seat'][ctr]);
     $(".single-seat").each(function () {
-        for (ctr in active_seats) {
-            if (active_seats[ctr]['seat'] === $(this).text().trim()) {
+        for (ctr in active_seats[index]['seat']) {
+            if (active_seats[index]['seat'][ctr] === $(this).text().trim()) {
                 $(this).css("pointer-events", "none");
                 $(this).toggleClass('active');
             }
         }
+        // for (ctr in active_seats) {
+        //     console.log("ASD");
+        //     if (active_seats[ctr]['seat'] === $(this).text().trim()) {
+        //         $(this).css("pointer-events", "none");
+        //         $(this).toggleClass('active');
+        //     }
+        // }
     });
 });
