@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Cinema World</title>
+	<link rel="shortcut icon" type="image/png" href=".\assets\popcorn.png"/>
+	<link rel="stylesheet" type="text/css" href=".\style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<link
+		href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Montserrat|Open+Sans+Condensed:300|Roboto+Condensed&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<!-- nav bar -->
+	<nav class="navbar navbar fixed-top" id="navigation">
+		<a class="navbar-brand mr-0" href=".\index.html" id="logo-name">
+			<img src=".\assets\popcorn.png" class="d-inline-block align-top" alt="" id="logo">
+			Cinema World
+		</a>
+		<ul class="nav" id="nav-bar-items">
+			<li class="nav-item">
+				<a class="nav-link nav-bar-item" href="#now-showing" id="first-menu">Now Showing</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link nav-bar-item" href=".\reserve.html" id="first-menu">Reserve</a>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- header -->
+	<div class="jumbotron jarallax rounded-0" id="header">
+		<h1 class="display-4" id="header-title">Welcome to Cinema World!</h1>
+		<p class="lead" id="starting">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+			incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+			eiusmod tempor
+			incididunt ut labore et dolore magna aliqua. </p>
+	</div>
+
+
+	<!-- now showing -->
+	<div class="d-flex justify-content-center" id="now-showing">
+		<h2 id="title-label">Now Showing</h2>
+	</div>
+
+	<div class="container" >
+		<div class="input-group d-flex justify-content-start" id="select-date">
+			<label for="choose-day" class="col-sm-2 col-form-label" id="reservation-label">Date</label>
+			<select class="custom-select" id="choose-day" onchange="setDate(this.value)">
+				<option name="selected-date" value="September 4, 2019">September 4, 2019</option>
+				<option value="September 5, 2019">September 5, 2019</option>
+				<option value="September 6, 2019">September 6, 2019</option>
+				<option value="September 9, 2019">September 9, 2019</option>
+				<option value="September 10, 2019">September 10, 2019</option>
+				<option value="September 11, 2019">September 11, 2019</option>
+				<option value="September 14, 2019">September 14, 2019</option>
+				<option value="September 18, 2019">September 18, 2019</option>
+				<option value="September 22, 2019">September 22, 2019</option>
+				<option value="September 24, 2019">September 24, 2019</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="container" id="movies">
+		<div class="row" id="now-showing-container">
+			<!-- movies go here (dynamically placed using JavaScript) -->
+		</div>
+	</div>
+
+
+	<div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="2500">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselIndicators" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+			<blockquote class="blockquote text-center movie-review d-block-1">
+				<p class="mb-0">The second major Hollywood movie to feature a female superhero at its center.</p>
+				<footer class="blockquote-footer">Owen Gleiberman <cite title="Source Title">Variety</cite></footer>
+			</blockquote>
+			</div>
+			<div class="carousel-item">
+			<blockquote class="blockquote text-center movie-review d-block-2">
+				<p class="mb-0">The Last Jedi isn't perfect, morally, spiritually or aesthetically.</p>
+				<p>I think it's the best Star Wars film since the original trio</p>
+				<footer class="blockquote-footer">Paul Asay <cite title="Source Title">Plugged In</cite></footer>
+			</blockquote>
+			</div>
+			<div class="carousel-item">
+			<blockquote class="blockquote text-center movie-review d-block-3">
+				<p class="mb-0">An indifferent box office promises to get a lift from a genuinely novel protagonist as enigmatic as she is compelling</p>
+				<footer class="blockquote-footer">Ann Hornaday <cite title="Source Title">Washington Post</cite></footer>
+			</blockquote>
+			</div>
+			<div class="carousel-item">
+			<blockquote class="blockquote text-center movie-review d-block-4">
+				<p class="mb-0">Dare not miss this opportunity to bid farewell to your decade-old hero Inc, with a tear and a smile.</p>
+				<footer class="blockquote-footer">John Smith <cite title="Source Title">New York Times</cite></footer>
+			</blockquote>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
+
+	<!-- Footer -->
+	<footer class="page-footer font-small unique-color-dark footer">
+		<div class="container text-center text-md-left pt-5">
+		  <div class="row">
+			<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+			  <h6 class="text-uppercase font-weight-bold" id="footer-title">Cinema World</h6>
+			  <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
+			  <p id="footer-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+					incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor
+					incididunt ut labore et dolore magna aliqua.</p>
+	  
+			</div>
+
+			<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+			  <h6 class="text-uppercase font-weight-bold" id="footer-title">Menu</h6>
+			  <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			  <p id="footer-item">
+				<a href=".\index.html#now-showing " id="footer-item">Now Showing</a>
+			  </p>
+			  <p id="footer-item">
+				<a href="reserve.html" id="footer-item">Reserve Tickets</a>
+			  </p>
+			  <p id="footer-item">
+				<a href="#" id="footer-item">Coming Soon</a>
+			  </p>
+	  
+			</div>
+
+			<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+			  <h6 class="text-uppercase font-weight-bold" id="footer-title">Contact</h6>
+			  <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+			  <p  id="footer-item">
+				Alabang, Muntinlupa</p>
+			  <p id="footer-item">
+				cinemaworld@gmail.com</p>
+			  <p  id="footer-item">
+				+ 01 234 567 88</p>
+			</div>
+		  </div>
+	  
+		</div>
+		<div class="footer-copyright text-center py-3" id="footer-item">© 2018 Copyright:
+		  <a href=".\index.html"> cinemaworld.com</a>
+		</div>
+	  </footer>
+
+	  <!-- script -->
+	  <script src=".\scripts\script.js"></script>
+	  <script>
+			localStorage.removeItem("selected-cinema");
+		  	localStorage.removeItem("selected-movie");
+		  	localStorage.removeItem("selected-date");
+			$('.cinema-card').on('click', function() {		
+				localStorage.setItem("selected-cinema", $(this).find('#title-label').text());
+				localStorage.setItem("selected-movie", $(this).find('.card-title').text());				
+				localStorage.setItem("selected-date", $('select.custom-select').val());			
+			});
+	  </script>
+</body>
+</html>
