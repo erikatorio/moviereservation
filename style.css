@@ -97,7 +97,8 @@ body {
 }
 
 #select-date {
-	width: 300px;
+	width: 297px;
+	margin: 70px 0 20px 0;
 }
 
 #movie-card {
