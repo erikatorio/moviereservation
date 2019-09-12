@@ -142,8 +142,13 @@
 			</select>
 		</div>
 		<div class="d-flex justify-content-center">
-				<a href=".\seats.html" class="btn btn-md" id="button-text">Select Seats</a>
+			<a href="#seats" class="btn btn-md" id="seats-button">Select Seats</a>
 		</div>
+	</div>
+
+	<!-- seats -->
+	<div class="container" id="seats">
+		
 	</div>
 	
 	<!-- Footer -->
@@ -197,7 +202,13 @@
 		$('#datepicker').datepicker({
 			uiLibrary: 'bootstrap4'
 		});
+
+		$(".single-seat").on('click', function() {
+			alert('clicked');
+		})
 	</script>
+	<script src=".\scripts\seats-selector.js"></script>
+	<script src=".\scripts\seats.js"></script>
 </body>
 
 </html>
