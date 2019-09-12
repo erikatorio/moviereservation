@@ -140,7 +140,7 @@ function movieTemplate(now_showing) {
                     ${now_showing.show_time}
                 </p>
                 <div class="d-flex justify-content-center">
-                    <a href="${now_showing.link}" class="btn btn-sm" id="button-text">Reserve Tickets</a>
+                    <a href="movie.html" class="btn btn-sm" id="button-text">Reserve Tickets</a>
                 </div>
             </div>
         </div>
@@ -153,7 +153,6 @@ var now_showing = [];
 
 //append movies in cinema selection page
 function populate() {
-    console.log(date);
     if(date !== "") {
         now_showing = [];
         for (var key in movies) {

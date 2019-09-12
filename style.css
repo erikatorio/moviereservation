@@ -91,6 +91,12 @@ body {
 	color: #E94B3CFF;
 }
 
+#seats-button {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: rgb(45, 41, 38, 0.7);
+	color: #E94B3CFF;
+}
+
 #now-showing {
 	border-bottom: #E94B3CFF 0.5px solid;
 	margin: 30px 400px;
@@ -323,6 +329,11 @@ body {
 	height: 50px;
 }
 
+a[ id= "seats-button" ]:target ~ #seats {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+
 .legends {
 	margin-top: 30px;
 	padding: 16px 10px;
@@ -391,6 +402,14 @@ body {
 #reservation-label {
 	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.reservation-item {
+	color: #E94B3CFF !important;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 5px;
 }
 
 #choose-movie {

@@ -62,29 +62,27 @@
 	<!-- reservation form -->
 	<div class="container reservation">
 		<div class="input-group mb-3">
-			<label for="choose-cinema" class="col-sm-2 col-form-label" id="reservation-label">Cinema</label>
-			<select class="custom-select" id="choose-cinema">
-				<option selected>Choose...</option>
-				<option value="1">Cinema 1</option><!-- ETO -->
-			</select>
+			<label for="choose-cinema" class="col-sm-4 col-form-label" id="reservation-label">Cinema</label>
+			<p class="reservation-item" id="cinema-number">asdasd</p>
 		</div>
 		<div class="input-group mb-3">
-			<label for="datepicker" class="col-sm-2 col-form-label" id="reservation-label">Select Date</label>
-			<input id="datepicker" width="276" />
+			<label for="datepicker" class="col-sm-4 col-form-label" id="reservation-label">Select Date</label>
+			<p class="reservation-item" id="showing-date">asdas</p>
 		</div>
 
 		<div class="input-group mb-3">
-			<label for="choose-date" class="col-sm-2 col-form-label" id="reservation-label">Select Time</label>
-			<select class="custom-select" id="choose-date">
-				<option selected>Choose...</option>
-				<option value="1">8:00 PM</option>
-			</select>
+			<label for="choose-time" class="col-sm-4 col-form-label" id="reservation-label">Select Time</label>
+			<p class="reservation-item" id="showing-time">sda</p>
 		</div>
 		<div class="d-flex justify-content-center">
-				<a href=".\seats.html" class="btn btn-md" id="button-text">Select Seats</a>
+			<a href="#seats" class="btn btn-md" id="seats-button">Select Seats</a>
 		</div>
 	</div>
 
+	<!-- seats -->
+	<div class="container" id="seats">
+		
+	</div>
 	
 	<!-- Footer -->
 	<footer class="page-footer font-small unique-color-dark footer">
@@ -165,6 +163,7 @@
 			uiLibrary: 'bootstrap4'
 		});
 	</script>
+	<script src=".\scripts\seats.js"></script>
 </body>
 
 </html>
