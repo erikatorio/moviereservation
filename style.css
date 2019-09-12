@@ -508,6 +508,50 @@ a[ id= "seats-button" ]:target ~ #seats {
 	padding-top: 190px;
 }
 
+#movie7-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-7.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie8-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-8.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie9-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-9.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
+#movie10-header {
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-10.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: #fff;
+	height: 400px;
+	padding-top: 190px;
+}
+
 .thead {
 	color: #E94B3CFF;
 	letter-spacing: 4px;
