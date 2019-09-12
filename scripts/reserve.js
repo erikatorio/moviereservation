@@ -21,15 +21,15 @@ $(document).on('click', '#button-text', function() {
         localStorage.setItem('reservations', JSON.stringify(reservations))
 });
 
-function reservationTable(stored_reservations) {
+function reservationTable(stored_reservations, index) {
     return `
         <tr>
-            <th scope="row">${stored_reservations.key}</th>
+            <th scope="row">${index}</th>
             <td>${stored_reservations.title}</td>
             <td>${stored_reservations.cinema}</td>
             <td>${stored_reservations.date} ${stored_reservations.time}</td>
             <td>${stored_reservations.seats}</td>
-            <td><button type="button" class="btn btn-sm" id="button-text" value="21945">Cancel</button></td>
+            <td><button type="button" class="btn btn-sm" id="button-text" value=${index}>Cancel</button></td>
         </tr>
     `
 }
