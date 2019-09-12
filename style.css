@@ -97,6 +97,12 @@ body {
 	color: #E94B3CFF;
 }
 
+#reserve-button-two {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: rgb(45, 41, 38, 0.7);
+	color: #E94B3CFF;
+}
+
 #cancel-reservation {
 	font-family: 'Roboto Condensed', sans-serif;
 	background-color: rgb(45, 41, 38, 0.7);
