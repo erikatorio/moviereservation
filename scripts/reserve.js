@@ -7,7 +7,6 @@ $(document).on('click', '#button-text', function() {
         console.log('set');
     } 
     reservations = JSON.parse(localStorage.getItem('reservations'));
-    console.log(reservations);
     var items = 
         {
             title: $('#choose-movie').val(),
@@ -29,7 +28,7 @@ function reservationTable(stored_reservations, index) {
             <td>${stored_reservations.cinema}</td>
             <td>${stored_reservations.date} ${stored_reservations.time}</td>
             <td>${stored_reservations.seats}</td>
-            <td><button type="button" class="btn btn-sm" id="button-text" value=${index}>Cancel</button></td>
+            <td><button type="button" class="btn btn-sm" id="cancel-reservation" value=${index}>Cancel</button></td>
         </tr>
     `
 }
@@ -49,3 +48,12 @@ function populateReservation() {
 }
 
 populateReservation();
+
+// $(document).on('click', 'cancel-reservation', function() {
+//     var indexToBeDeleted = ${'#cancel-reservation'}.val();
+//     for(var key in transactions) {
+//         if(transactions[indexToBeDeleted]) {
+
+//         }
+//     }
+// });

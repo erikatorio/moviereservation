@@ -364,7 +364,6 @@ const movies = [
 // store movies in local storage
 localStorage.setItem('movies', JSON.stringify(movies));
 var date = "";
-console.log(movies);
 
 function movieTemplate(now_showing) {
     return `
