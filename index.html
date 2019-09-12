@@ -168,7 +168,7 @@
 			localStorage.removeItem("selected-cinema");
 		  	localStorage.removeItem("selected-movie");
 		  	localStorage.removeItem("selected-date");
-			$('.cinema-card').on('click', function() {		
+			$(document).on('click', '.cinema-card', function() {		
 				localStorage.setItem("selected-cinema", $(this).find('#title-label').text());
 				localStorage.setItem("selected-movie", $(this).find('.card-title').text());				
 				localStorage.setItem("selected-date", $('select.custom-select').val());			

@@ -7,7 +7,7 @@ const movies = [
         poster: '.\\assets\\poster-one.jpg',
         link: ".\\movie-one.html",
         cinema: 'Cinema 1',
-        date: 'September 4, 2019'
+        date: 'September 4, 2019',
     },
     {
         id: 2,
