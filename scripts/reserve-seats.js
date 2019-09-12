@@ -56,7 +56,7 @@ $(document).on('click', '#cancel-reservation', function() {
     transactions.splice(indexToBeDeleted, 1);
     localStorage.removeItem('reservations')
     localStorage.setItem('reservations', JSON.stringify(transactions));
-    document.location.reload()
+    document.location.reload();
 });
 
 // seats
