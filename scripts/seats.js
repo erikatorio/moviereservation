@@ -30,6 +30,18 @@ switch (movies[item_index]['title']) {
     case 'Aladdin':
         movie_header = 'movie6-header';
         break;
+    case 'Avengers: Endgame':
+        movie_header = 'movie7-header';
+        break;
+    case 'Joker':
+        movie_header = 'movie8-header';
+        break;
+    case 'Spiderman: Far From Home':
+        movie_header = 'movie9-header';
+        break;
+    case 'Zombieland: Double Tap':
+        movie_header = 'movie10-header';
+        break;
 }
 
 $('#default-header').attr('id', movie_header);
@@ -39,6 +51,8 @@ $('#starting').html(movies[item_index]['synopsis']);
 $('#cinema-number').html(movies[item_index]['cinema'].replace('Cinema ', ''));
 $('#showing-date').html(movies[item_index]['date']);
 $('#showing-time').html(movies[item_index]['show_time']);
+$('#tab-title').html(movies[item_index]['title']);
+
 
 
 //Seats Active
