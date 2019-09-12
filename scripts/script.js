@@ -140,7 +140,7 @@ function movieTemplate(now_showing) {
                     ${now_showing.show_time}
                 </p>
                 <div class="d-flex justify-content-center">
-                    <a href="${now_showing.link}?synopsis=${now_showing.synopsis}" class="btn btn-sm" id="button-text">Reserve Tickets</a>
+                    <a href="movie.html" class="btn btn-sm" id="button-text">Reserve Tickets</a>
                 </div>
             </div>
         </div>

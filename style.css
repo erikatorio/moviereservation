@@ -402,6 +402,14 @@ a[ id= "seats-button" ]:target ~ #seats {
 #reservation-label {
 	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.reservation-item {
+	color: #E94B3CFF !important;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 5px;
 }
 
 #choose-movie {
