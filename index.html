@@ -57,8 +57,7 @@
 		<div class="input-group mb-3 d-flex justify-content-start" id="select-date">
 			<label for="choose-day" class="col-sm-2 col-form-label" id="reservation-label">Date</label>
 			<select class="custom-select" id="choose-day" onchange="setDate(this.value)">
-				<option selected value="">Choose...</option>
-				<option value="September 4, 2019">September 4, 2019</option>
+				<option name="selected-date" value="September 4, 2019">September 4, 2019</option>
 				<option value="September 5, 2019">September 5, 2019</option>
 				<option value="September 6, 2019">September 6, 2019</option>
 			</select>
@@ -166,8 +165,13 @@
 	  <!-- script -->
 	  <script src=".\scripts\script.js"></script>
 	  <script>
-			$('.card-body').on('click', function() {
-				localStorage.setItem("selected-movie", test = $(this).find('.card-title').text());
+			localStorage.removeItem("selected-cinema");
+		  	localStorage.removeItem("selected-movie");
+		  	localStorage.removeItem("selected-date");
+			$('.cinema-card').on('click', function() {		
+				localStorage.setItem("selected-cinema", $(this).find('#title-label').text());
+				localStorage.setItem("selected-movie", $(this).find('.card-title').text());				
+				localStorage.setItem("selected-date", $('select.custom-select').val());			
 			});
 	  </script>
 </body>
