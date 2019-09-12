@@ -128,7 +128,7 @@ var date = "";
 
 function movieTemplate(now_showing) {
     return `
-    <div class="col-md">
+    <div class="col-md cinema-card">
         <div class="d-flex justify-content-center">
             <h3 id="title-label">${now_showing.cinema}</h3>
         </div>
