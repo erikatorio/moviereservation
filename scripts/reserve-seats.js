@@ -49,14 +49,15 @@ function populateReservation() {
 
 populateReservation();
 
-// $(document).on('click', 'cancel-reservation', function() {
-//     var indexToBeDeleted = ${'#cancel-reservation'}.val();
-//     for(var key in transactions) {
-//         if(transactions[indexToBeDeleted]) {
 
-//         }
-//     }
-// });
+//cancel reservation
+$(document).on('click', '#cancel-reservation', function() {
+    var indexToBeDeleted = $(this).prop("value");
+    transactions.splice(indexToBeDeleted, 1);
+    localStorage.removeItem('reservations')
+    localStorage.setItem('reservations', JSON.stringify(transactions));
+    document.location.reload();
+});
 
 // seats
 var total_price = 0;
@@ -427,7 +428,7 @@ $('#seats-button').on('click', function () {
                 </div>
             </div>
             <div class="row d-flex">
-                <a href=".\\reserve.html" class="col-5 btn btn-sm btn-dark reserve-button" id="button-text">
+                <a href=".\\reserve.html" class="col-5 btn btn-sm btn-dark reserve-button" id="reserve-button-one">
                     Reserve Tickets
                 </a>
             </div>
