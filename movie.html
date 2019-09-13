@@ -57,7 +57,30 @@
 				<li class="breadcrumb-item" id="current-breadcrumb">Reserve</li>
             <li class="breadcrumb-item active" aria-current="page">Seating</li>
         </ol>
-    </nav>
+	</nav>
+	
+	<!-- list of reservations -->
+	<div class="container">
+		<div class="d-flex justify-content-center" id="reservation-table">
+			<h2 id="title-label">Current Reservations</h2>
+		</div>
+
+		<table class="table reserve">
+			<thead class="thead">
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Movie Title</th>
+					<th scope="col">Cinema</th>
+					<th scope="col">Schedule</th>
+					<th scope="col">Seats</th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody id="reservation-body">
+				<!-- reservations -->
+			</tbody>
+		</table>
+	</div>
 
 	<!-- reservation form -->
 	<div class="container reservation">

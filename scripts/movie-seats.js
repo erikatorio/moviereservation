@@ -53,21 +53,34 @@ $(document).on('click', '#reserve-button-two', function () {
     selected_movie = localStorage.getItem('selected-movie');
     selected_cinema = localStorage.getItem('selected-cinema');
     selected_date = localStorage.getItem('selected-date');
+    
+    $(".single-seat").each(function () {
+        if ($(this).hasClass('active')) {
+            var duplicate = temp.indexOf($(this).text().trim());
+            if(duplicate !== -1) {
+                temp.splice(duplicate, 0);
+            } else {
+                temp.push($(this).text().trim());
+            }
+        }
+    });
+
     for (ctr in local) {
         if (local[ctr]['title'] === selected_movie &&
             local[ctr]['cinema'] === selected_cinema &&
             local[ctr]['date'] === selected_date) {
             index = ctr;
-            for (ctr in local[ctr]['seat']) {
-                temp.push(local[ctr]['seat']);
+            console.log(local[index]['seat']);
+            for (i in local[index]['seat']) {
+                var duplicateTwo = temp.indexOf(local[index]['seat'][i]);
+                if(duplicateTwo !== -1) {
+                    temp.splice(duplicateTwo, 1);
+                }
             }
         }
     }
-    $(".single-seat").each(function () {
-        if ($(this).hasClass('active')) {
-            temp.push($(this).text().trim());
-        }
-    });
+
+    console.log(temp);
     var items = {
         title: selected_movie,
         cinema: selected_cinema,
@@ -75,10 +88,12 @@ $(document).on('click', '#reserve-button-two', function () {
         seat: temp,
         uuid: thisUUID
     }
+
     if (index === null) {
         local.push(items);
     } else {
-        local[index]['seat'] = temp;
+        local.push(items);
+        // local[index]['seat'] = temp;
     }
     localStorage.removeItem('reserved-seats')
     localStorage.setItem('reserved-seats', JSON.stringify(local));
@@ -91,6 +106,55 @@ function uuidv4() {
         return v.toString(16);
     });
 }
+
+//populate reservation table
+function reservationTable(stored_reservations, index) {
+    return `
+        <tr>
+            <th scope="row">${index}</th>
+            <td>${stored_reservations.title}</td>
+            <td>${stored_reservations.cinema}</td>
+            <td>${stored_reservations.date} ${stored_reservations.time}</td>
+            <td>${stored_reservations.seats}</td>
+            <td><button type="button" class="btn btn-sm" id="cancel-reservation" value=${index}>Cancel</button></td>
+        </tr>
+    `
+}
+
+var transactions = JSON.parse(localStorage.getItem('reservations'));
+var stored_reservations = [];
+function populateReservation() {
+    for (var key in transactions) {
+        if(transactions.hasOwnProperty(key)) {
+            stored_reservations[key] = transactions[key];
+        }
+    }
+    document.getElementById('reservation-body').innerHTML = `
+        ${stored_reservations.map(reservationTable).join('')}
+    `
+}
+
+populateReservation();
+
+var seating_arrangement = JSON.parse(localStorage.getItem('reserved-seats'));
+//cancel reservation
+$(document).on('click', '#cancel-reservation', function() {
+    var indexToBeDeleted = $(this).prop("value");
+    for (var key in seating_arrangement) {
+        if(seating_arrangement.hasOwnProperty(key)) {
+            if(transactions[indexToBeDeleted].uuid === seating_arrangement[key].uuid) {
+                var seatToBeDeleted = key;
+                seating_arrangement.splice(seatToBeDeleted, 1);
+                localStorage.removeItem('reserved-seats');
+                localStorage.setItem('reserved-seats', JSON.stringify(seating_arrangement));
+            }
+        }
+    }
+    transactions.splice(indexToBeDeleted, 1);
+    localStorage.removeItem('reservations')
+    localStorage.setItem('reservations', JSON.stringify(transactions));
+    document.location.reload();
+});
 
 $('#seats-button').click(function () {
     $('#seats').html(`
@@ -387,7 +451,7 @@ $('#seats-button').click(function () {
                 </div>
             </div>
             <div class="row d-flex">
-                <a href=".\\reserve.html" class="col-5 btn btn-sm btn-dark reserve-button" id="reserve-button-two">
+                <a href=".//movie.html" class="col-5 btn btn-sm btn-dark reserve-button" id="reserve-button-two">
                     Reserve Tickets
                 </a>
             </div>
@@ -396,17 +460,24 @@ $('#seats-button').click(function () {
 </div>`);
     var active_seats = JSON.parse(localStorage.getItem('reserved-seats'));
     var index = null;
+    var show_active_seats = [];
+    console.log(active_seats);
     for (ctr in active_seats) {
         if (active_seats[ctr]['title'] === selected_movie &&
             active_seats[ctr]['cinema'] === selected_cinema &&
             active_seats[ctr]['date'] === selected_date) {
             index = ctr;
+            console.log(active_seats[ctr]['seat']);
+            for(j in active_seats[index]['seat']) {
+                show_active_seats.push(active_seats[index]['seat'][j]);
+            }
         }
     }
-    var temp = active_seats[index]['seat']
+
+    // var temp = active_seats[index]['seat']
     $(".single-seat").each(function () {
-        for (ctr in active_seats[index]['seat']) {
-            if (active_seats[index]['seat'][ctr] === $(this).text().trim()) {
+        for (ctr in show_active_seats) {
+            if (show_active_seats[ctr] === $(this).text().trim()) {
                 $(this).css("pointer-events", "none");
                 $(this).toggleClass('active');
             }
