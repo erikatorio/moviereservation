@@ -320,6 +320,7 @@ body {
 	background-color: black;
 	width: 800px !important;
 	padding-bottom: 0;
+	padding-top: 100px;
 }
 
 .single-seat {
@@ -422,6 +423,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	font-size: 18px;
 }
 
 .reservation-item {
@@ -588,4 +590,8 @@ tbody {
 
 #reservation-table {
 	margin: 10px 200px;
+}
+
+select {
+	color: #E94B3CFF !important;
 }
