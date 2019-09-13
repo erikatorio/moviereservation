@@ -70,7 +70,7 @@ $(document).on('click', '#reserve-button-two', function () {
             local[ctr]['cinema'] === selected_cinema &&
             local[ctr]['date'] === selected_date) {
             index = ctr;
-            console.log(local[index]['seat']);
+            
             for (i in local[index]['seat']) {
                 var duplicateTwo = temp.indexOf(local[index]['seat'][i]);
                 if(duplicateTwo !== -1) {
@@ -80,7 +80,6 @@ $(document).on('click', '#reserve-button-two', function () {
         }
     }
 
-    console.log(temp);
     var items = {
         title: selected_movie,
         cinema: selected_cinema,
@@ -97,6 +96,7 @@ $(document).on('click', '#reserve-button-two', function () {
     }
     localStorage.removeItem('reserved-seats')
     localStorage.setItem('reserved-seats', JSON.stringify(local));
+    document.location.reload();
 });
 
 //generate uuid function
@@ -451,7 +451,7 @@ $('#seats-button').click(function () {
                 </div>
             </div>
             <div class="row d-flex">
-                <a href=".//movie.html" class="col-5 btn btn-sm btn-dark reserve-button" id="reserve-button-two">
+                <a href="./movie.html#reservation-table" class="col-5 btn btn-sm btn-dark reserve-button" id="reserve-button-two">
                     Reserve Tickets
                 </a>
             </div>
@@ -461,13 +461,13 @@ $('#seats-button').click(function () {
     var active_seats = JSON.parse(localStorage.getItem('reserved-seats'));
     var index = null;
     var show_active_seats = [];
-    console.log(active_seats);
+
     for (ctr in active_seats) {
         if (active_seats[ctr]['title'] === selected_movie &&
             active_seats[ctr]['cinema'] === selected_cinema &&
             active_seats[ctr]['date'] === selected_date) {
             index = ctr;
-            console.log(active_seats[ctr]['seat']);
+
             for(j in active_seats[index]['seat']) {
                 show_active_seats.push(active_seats[index]['seat'][j]);
             }

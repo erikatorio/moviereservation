@@ -48,7 +48,7 @@ const movies = [
         id: 6,
         title: 'IT: Chapter 2',
         show_time: '8:00 PM',
-        synopsis: 'Aladdin is a lovable street urchin who meets Princess Jasmine, the beautiful daughter of the sultan of Agrabah. While visiting her exotic palace, Aladdin stumbles upon a magic oil lamp that unleashes a powerful, wisecracking, larger-than-life genie. As Aladdin and the genie start to become friends, they must soon embark on a dangerous mission to stop the evil sorcerer Jafar from overthrowing young Jasmine\'s kingdom. ',
+        synopsis: 'Defeated by members of the Losers\' Club, the evil clown Pennywise returns 27 years later to terrorize the town of Derry, Maine, once again. Now adults, the childhood friends have long since gone their separate ways. But when people start disappearing, Mike Hanlon calls the others home for one final stand. Damaged by scars from the past, the united Losers must conquer their deepest fears to destroy the shape-shifting Pennywise -- now more powerful than ever.',
         poster: '.\\assets\\poster-five.jpg',
         cinema: 'Cinema 2',
         date: 'September 5, 2019'

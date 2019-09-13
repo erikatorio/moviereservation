@@ -428,6 +428,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 	color: #E94B3CFF !important;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin-top: 5px;
+	font-size: 20px;
 }
 
 #choose-movie {
