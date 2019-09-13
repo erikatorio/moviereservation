@@ -20,14 +20,35 @@ $(document).on('click', '.single-seat', function () {
     $(".ticket_price").html("PHP " + total_price + ".00");
 });
 
+var reservations = [];
+var temp = [];
+var local = [];
+var index = null;
+
 $(document).on('click', '#reserve-button-two', function () {
-    var temp = [];
-    var local = [];
-    var index = null;
-    if (JSON.parse(localStorage.getItem('reserved-seats') === null)) {
+    var thisUUID = uuidv4();
+    //code for storing reservation in current reservation
+    if(localStorage.getItem('reservations') === null) {
+        localStorage.setItem('reservations', JSON.stringify(reservations));
+    } 
+
+    reservations = JSON.parse(localStorage.getItem('reservations'));
+    var transaction = {
+        title: selected_movie,
+        cinema: selected_cinema,
+        date: selected_date,
+        time: '8:00 PM',
+        seats: $(".ticket_total").text(),
+        uuid: thisUUID
+    }
+    reservations.push(transaction);
+    localStorage.removeItem('reservations')
+    localStorage.setItem('reservations', JSON.stringify(reservations));
+
+    //code for seats
+    if (localStorage.getItem('reserved-seats') === null) {
         localStorage.setItem('reserved-seats', JSON.stringify(local));
     }
-
     local = JSON.parse(localStorage.getItem('reserved-seats'));
     selected_movie = localStorage.getItem('selected-movie');
     selected_cinema = localStorage.getItem('selected-cinema');
@@ -37,12 +58,11 @@ $(document).on('click', '#reserve-button-two', function () {
             local[ctr]['cinema'] === selected_cinema &&
             local[ctr]['date'] === selected_date) {
             index = ctr;
-            for (ctrl in local[ctr]['seat']) {
+            for (ctr in local[ctr]['seat']) {
                 temp.push(local[ctr]['seat']);
             }
         }
     }
-    console.log(index);
     $(".single-seat").each(function () {
         if ($(this).hasClass('active')) {
             temp.push($(this).text().trim());
@@ -52,7 +72,8 @@ $(document).on('click', '#reserve-button-two', function () {
         title: selected_movie,
         cinema: selected_cinema,
         date: selected_date,
-        seat: temp
+        seat: temp,
+        uuid: thisUUID
     }
     if (index === null) {
         local.push(items);
@@ -60,8 +81,16 @@ $(document).on('click', '#reserve-button-two', function () {
         local[index]['seat'] = temp;
     }
     localStorage.removeItem('reserved-seats')
-    localStorage.setItem('reserved-seats', JSON.stringify(local))
+    localStorage.setItem('reserved-seats', JSON.stringify(local));
 });
+
+//generate uuid function
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
 
 $('#seats-button').click(function () {
     $('#seats').html(`
@@ -80,7 +109,7 @@ $('#seats-button').click(function () {
         </div>
         <div class="col d-flex justify-content-center rounded-circle single-seat">
             A3
-        </div>[]
+        </div>
         <div class="col d-flex justify-content-center rounded-circle single-seat">
             A4
         </div>
@@ -375,7 +404,6 @@ $('#seats-button').click(function () {
         }
     }
     var temp = active_seats[index]['seat']
-    console.log(active_seats[index]['seat'][ctr]);
     $(".single-seat").each(function () {
         for (ctr in active_seats[index]['seat']) {
             if (active_seats[index]['seat'][ctr] === $(this).text().trim()) {
@@ -383,12 +411,5 @@ $('#seats-button').click(function () {
                 $(this).toggleClass('active');
             }
         }
-        // for (ctr in active_seats) {
-        //     console.log("ASD");
-        //     if (active_seats[ctr]['seat'] === $(this).text().trim()) {
-        //         $(this).css("pointer-events", "none");
-        //         $(this).toggleClass('active');
-        //     }
-        // }
     });
 });

@@ -1,10 +1,8 @@
-var id = 0;
 var reservations = [];
 
 $(document).on('click', '#reserve-button-one', function() {
     if(localStorage.getItem('reservations') === null) {
         localStorage.setItem('reservations', JSON.stringify(reservations));
-        console.log('set');
     } 
     reservations = JSON.parse(localStorage.getItem('reservations'));
     var items = 
@@ -13,7 +11,8 @@ $(document).on('click', '#reserve-button-one', function() {
             cinema: $('#choose-cinema').val(),
             date: $('#datepicker').val(),
             time: '8:00 PM',
-            seats: $(".ticket_total").text()
+            seats: $(".ticket_total").text(),
+            uuid: uuidv4()
         }
         reservations.push(items);
         localStorage.removeItem('reservations')
@@ -34,7 +33,6 @@ function reservationTable(stored_reservations, index) {
 }
 
 var transactions = JSON.parse(localStorage.getItem('reservations'));
-console.log(transactions);
 var stored_reservations = [];
 function populateReservation() {
     for (var key in transactions) {
@@ -49,10 +47,20 @@ function populateReservation() {
 
 populateReservation();
 
-
+var seating_arrangement = JSON.parse(localStorage.getItem('reserved-seats'));
 //cancel reservation
 $(document).on('click', '#cancel-reservation', function() {
     var indexToBeDeleted = $(this).prop("value");
+    for (var key in seating_arrangement) {
+        if(seating_arrangement.hasOwnProperty(key)) {
+            if(transactions[indexToBeDeleted].uuid === seating_arrangement[key].uuid) {
+                var seatToBeDeleted = key;
+                seating_arrangement.splice(seatToBeDeleted, 1);
+                localStorage.removeItem('reserved-seats');
+                localStorage.setItem('reserved-seats', JSON.stringify(seating_arrangement));
+            }
+        }
+    }
     transactions.splice(indexToBeDeleted, 1);
     localStorage.removeItem('reservations')
     localStorage.setItem('reservations', JSON.stringify(transactions));
@@ -81,57 +89,13 @@ $(document).on('click', '.single-seat', function () {
     $(".ticket_price").html("PHP " + total_price + ".00");
 });
 
-$(document).on('click', '#button-text', function () {
-    var temp = [];
-    var local = JSON.parse(localStorage.getItem('reserved-seats'));
-    if (local === null) {
-        localStorage.setItem('reserved-seats', JSON.stringify({
-            title: selected_movie,
-            cinema: selected_cinema,
-            date: selected_date,
-            seat: []
-        }));
-        local = JSON.parse(localStorage.getItem('reserved-seats'));
-    }
-
-    if(local['title'] === selected_movie && local['cinema'] === selected_cinema && local['date'] === selected_date) {
-        // console.log(local['seat']);
-        for (ctr in local['seat']) {
-            temp.push(local['seat'][ctr].toString());
-        }
-        $(".single-seat").each(function () {
-            if ($(this).hasClass('active')) {
-                temp.push($(this).text().trim());
-            }
-        });
-        localStorage.removeItem('reserved-seats');
-        localStorage.setItem('reserved-seats', JSON.stringify({
-            title: local['title'],
-            cinema: local['cinema'],
-            date: local['date'],
-            seat: temp
-        }));
-    } else {
-        for (ctr in local['seat']) {
-            temp.push(local['seat'][ctr].toString());
-        }
-        $(".single-seat").each(function () {
-            if ($(this).hasClass('active')) {
-                temp.push($(this).text().trim());
-            }
-        });
-        var tempo = [];
-        tempo = local;
-        tempo.push({
-            title: selected_movie,
-            cinema: selected_cinema,
-            date: selected_date,
-            seat: temp
-        });
-        localStorage.removeItem('reserved-seats');
-        localStorage.setItem('reserved-seats', JSON.stringify(tempo));
-    }
-});
+//function for generating uuid for a transaction
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+    });
+}
 
 $('#seats-button').on('click', function () {
     $('#seats').html(`
@@ -150,7 +114,7 @@ $('#seats-button').on('click', function () {
         </div>
         <div class="col d-flex justify-content-center rounded-circle single-seat">
             A3
-        </div>[]
+        </div>
         <div class="col d-flex justify-content-center rounded-circle single-seat">
             A4
         </div>

@@ -153,7 +153,7 @@ body {
 
 .carousel-item .d-block-1 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-one.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../assets/review-one.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -165,7 +165,7 @@ body {
 
 .carousel-item .d-block-2 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-two.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../assets/review-two.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -177,7 +177,7 @@ body {
 
 .carousel-item .d-block-3 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-three.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../assets/review-three.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -189,7 +189,7 @@ body {
 
 .carousel-item .d-block-4 {
 	height: 450px;
-	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("./assets/review-four.jpg");
+	background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url("../assets/review-four.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -434,18 +434,21 @@ a[ id= "seats-button" ]:target ~ #seats {
 	background-color: #000000;
 	color: #E94B3CFF;
 	border-color: #E94B3CFF;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 #choose-cinema {
 	background-color: #000000;
 	color: #E94B3CFF;
 	border-color: #E94B3CFF;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 #datepicker {
 	background-color: #000000;
 	color: #E94B3CFF;
 	border-color: #E94B3CFF;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 #choose-date {
@@ -458,10 +461,11 @@ a[ id= "seats-button" ]:target ~ #seats {
 	background-color: #000000;
 	color: #E94B3CFF;
 	border-color: #E94B3CFF;
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 #movie1-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/cinema-1.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/cinema-1.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -472,7 +476,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie2-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-2.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-2.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -483,7 +487,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie3-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-3.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-3.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -494,7 +498,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie4-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-4.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-4.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -505,7 +509,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie5-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-5.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-5.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -516,7 +520,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie6-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-6.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-6.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -527,7 +531,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie7-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-7.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-7.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -538,7 +542,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie8-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-8.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-8.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -549,7 +553,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie9-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-9.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-9.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -560,7 +564,7 @@ a[ id= "seats-button" ]:target ~ #seats {
 }
 
 #movie10-header {
-	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("./assets/movie-10.gif");
+	background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../assets/movie-10.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
